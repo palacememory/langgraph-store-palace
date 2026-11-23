@@ -24,13 +24,11 @@ LangGraph's checkpointer keeps state inside one thread. The `store` is what surv
 
    The install script also runs `palace install --all` to wire Palace into your coding agents. If you only want the binary for this store, that step is harmless, and `palace uninstall` undoes it.
 
-2. Install the store. It is not on PyPI yet, so install it from GitHub:
+2. Install the store from PyPI:
 
    ```bash
-   pip install "git+https://github.com/palacememory/langgraph-store-palace"
+   pip install langgraph-store-palace
    ```
-
-   Once it is published, this becomes `pip install langgraph-store-palace`.
 
 ## Use
 
