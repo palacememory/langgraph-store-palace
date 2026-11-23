@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langgraph-store-palace"
+version = "0.1.0"
+description = "LangGraph BaseStore backed by Palace (palace-rs): local, verbatim memory with hybrid vector and BM25 search. Not associated in any way with the popular mempalace python."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Ionut Riza", email = "iriza@palacememory.com" }]
+keywords = ["langgraph", "langchain", "memory", "store", "agents", "palace", "mcp", "local-first"]
+dependencies = ["langgraph>=0.3"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/palacememory/langgraph-store-palace"
+Repository = "https://github.com/palacememory/langgraph-store-palace"
+Issues = "https://github.com/palacememory/langgraph-store-palace/issues"
+Website = "https://palacememory.com"
+"Palace core" = "https://github.com/AncientiCe/palace-rs"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langgraph_store_palace"]
